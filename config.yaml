@@ -1,0 +1,18 @@
+mappings:
+  classification_interimaire: "//hr:PositionCharacteristics/hr:PositionCoefficient"
+  statut: "//hr:PositionCharacteristics/hr:PositionStatus/hr:Code"
+  personne_absente: "//hr:ContractInformation/hr:ContractLegalReason/hr:PersonReplaced"
+  code_metier: "//hr:CustomerReportingRequirements/hr:CustomerJobCode"
+  code_site: "//hr:ReferenceInformation/hr:StaffingCustomerOrgUnitId/hr:IdValue"
+
+statut_map:
+  "Opérateur": "OP"
+  "Ouvriers": "6A"
+
+rules:
+  normalize_coefficient_from_level: true
+  classification_regex: "^[A-E]\d{1,2}$"
+
+site_idvalue:
+  rebuild: false
+  # siret_prefix: "12345678901234"
